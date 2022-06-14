@@ -121,6 +121,19 @@ window.addEventListener('scroll', () => {
 
 })
 
+window.addEventListener('touchmove', () => {
+
+    const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
+    // scrollTop = scroll depuis le top
+    // scrollHeight = scroll total
+    // clientHeight = hauteur de la fenêtre, partie visible.
+
+    if(clientHeight + scrollTop >= scrollHeight - 20) {
+        addPoke(6);
+    }
+
+})
+
 let index = 21;
 
 function addPoke(nb) {
