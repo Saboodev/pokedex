@@ -26,7 +26,7 @@ const types = {
 
 function fetchPokemonBase(){
 
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=898")
         .then(reponse => reponse.json())
         .then((allPoke) => {
             // console.log(allPoke);
@@ -125,7 +125,7 @@ let index = 21;
 
 function addPoke(nb) {
 
-    if(index > 151) {
+    if(index > 898) {
         return;
     }
     const arrToAdd = allPokemon.slice(index, index + nb);
@@ -146,7 +146,7 @@ searchInput.addEventListener('keyup', recherche);
 
 function recherche(){
 
-    if(index < 151) {
+    if(index < 898) {
         addPoke(130);
     }
 
